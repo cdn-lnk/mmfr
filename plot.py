@@ -20,7 +20,7 @@ def main(*args, **kwargs):
 		pyplot.xlabel("Frequency (Hz)")
 		pyplot.ylabel("??? (???)")
 		pyplot.legend()
-		pyplot.savefig(f"figure/{plot_script}.svg")
+		pyplot.savefig(f"figures/{plot_script}.svg")
 
 if __name__ == "__main__":
 	parser = ArgumentParser(description=__doc__)
