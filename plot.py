@@ -17,7 +17,10 @@ def main(*args, **kwargs):
 		pyplot.grid(lw=0.1)
 		pyplot.xlim(1e0, 1e5)
 		pyplot.ylim(1e8, 1e13)
-		pyplot.xlabel("Frequency (Hz)")
+		ticks = [2**i*20.625 for i in range(11)]
+		labels = ["E0", "E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "E10"]
+		pyplot.xticks(ticks, labels)
+		pyplot.xlabel("Notes (A4 = 440 Hz)")
 		pyplot.ylabel("??? (???)")
 		pyplot.legend()
 		pyplot.savefig(f"figures/{plot_script}.svg")
