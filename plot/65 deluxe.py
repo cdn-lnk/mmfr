@@ -1,3 +1,4 @@
+from pathlib import Path
 from matplotlib.pyplot import loglog as plot
 from .__fft__ import fft_wrapper
 
@@ -12,4 +13,5 @@ for amp in list_amp:
 			for modify in list_modify:
 				name = f"{amp}-{eq}-{effect}-{modify}"
 				x, y = fft_wrapper(name)
-				plot(x, y, color=eq, linewidth=.2, label=name)
+				label = f"{Path(__file__).stem}, {eq} eq, effects bypassed"
+				plot(x, y, color=eq, linewidth=.2, label=label)
