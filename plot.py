@@ -15,6 +15,8 @@ def main(*args, **kwargs):
 		pyplot.clf()
 		import_module(f"plot.{plot_script}")
 		pyplot.grid(lw=0.1)
+		pyplot.xlim(1e0, 1e5)
+		pyplot.ylim(1e8, 1e13)
 		pyplot.xlabel("Frequency (Hz)")
 		pyplot.ylabel("??? (???)")
 		pyplot.legend()
