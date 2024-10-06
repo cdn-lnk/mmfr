@@ -10,10 +10,10 @@ from matplotlib import pyplot
 pyplot.style.use('dark_background')
 
 def main(*args, **kwargs):
-	for plot_script in glob("plot/[!_]*.py"):
+	for plot_script in glob("plots/[!_]*.py"):
 		plot_script = Path(plot_script).stem
 		pyplot.clf()
-		import_module(f"plot.{plot_script}")
+		import_module(f"plots.{plot_script}")
 		pyplot.grid(lw=0.1)
 		pyplot.xlim(1e0, 1e5)
 		pyplot.ylim(1e8, 1e13)
